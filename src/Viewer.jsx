@@ -36,6 +36,19 @@ export default function MyBook(props) {
 		{ page: 2, image: "buku (2).webp" },
 		{ page: 3, image: "buku (3).webp" },
 		{ page: 4, image: "buku (4).webp" },
+		{ page: 5, image: "buku (5).webp" },
+		{ page: 6, image: "buku (6).webp" },
+		{ page: 7, image: "buku (7).webp" },
+		{ page: 8, image: "buku (8).webp" },
+		{ page: 9, image: "buku (9).webp" },
+		{ page: 10, image: "buku (10).webp" },
+		{ page: 11, image: "buku (11).webp" },
+		{ page: 12, image: "buku (12).webp" },
+		{ page: 13, image: "buku (13).webp" },
+		{ page: 14, image: "buku (14).webp" },
+		{ page: 15, image: "buku (15).webp" },
+		{ page: 16, image: "buku (16).webp" },
+		{ page: 17, image: "buku (17).webp" },
 	];
 
 	const Page = React.forwardRef((props, ref) => {
