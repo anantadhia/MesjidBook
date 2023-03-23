@@ -1,32 +1,58 @@
+// import HTMLFlipBook from "react-pageflip";
+// import React from "react";
+// export default function MyBook(props) {
+// 	//
+// 	const data = [
+// 		{ page: 1, image: "buku (1).webp" },
+// 		{ page: 2, image: "buku (2).webp" },
+// 		{ page: 3, image: "buku (3).webp" },
+// 		{ page: 4, image: "buku (4).webp" },]
+
+// 	const Page = React.forwardRef((props, ref) => {
+// 		return (
+// 			<div className="demoPage" ref={ref}>
+// 				{props.children}
+// 				<p>Page number: {props.number}</p>
+// 			</div>
+// 		);
+// 	});
+// 	return (
+// 		<HTMLFlipBook width={550} height={733} size="stretch" minWidth={315} maxWidth={1000} minHeight={400} maxHeight={1533}>
+// 			{images.map((image, index) => (
+// 				<Page number={page} key={index} className="demoPage">
+// 					<img src={image} alt={`Page ${index + 1}`} className="w-auto h-auto" />
+// 				</Page>
+// 			))}
+// 		</HTMLFlipBook>
+// 	);
+// }
+
 import HTMLFlipBook from "react-pageflip";
+import React from "react";
 
 export default function MyBook(props) {
-	const images = [
-		"buku (1).webp",
-		"buku (2).webp",
-		"buku (3).webp",
-		"buku (4).webp",
-		"buku (5).webp",
-		"buku (6).webp",
-		"buku (7).webp",
-		"buku (8).webp",
-		"buku (9).webp",
-		"buku (10).webp",
-		"buku (11).webp",
-		"buku (12).webp",
-		"buku (13).webp",
-		"buku (14).webp",
-		"buku (15).webp",
-		"buku (16).webp",
-		"buku (17).webp",
+	const data = [
+		{ page: 1, image: "buku (1).webp" },
+		{ page: 2, image: "buku (2).webp" },
+		{ page: 3, image: "buku (3).webp" },
+		{ page: 4, image: "buku (4).webp" },
 	];
 
+	const Page = React.forwardRef((props, ref) => {
+		return (
+			<div className="demoPage" ref={ref}>
+				{props.children}
+				<p className="bg-slate-500 text-white rounded-lg">Halaman: {props.number}</p>
+			</div>
+		);
+	});
+
 	return (
-		<HTMLFlipBook width={300} height={500}>
-			{images.map((image, index) => (
-				<div key={index} className="demoPage">
-					<img src={image} alt={`Page ${index + 1}`} width={300} height={500} />
-				</div>
+		<HTMLFlipBook width={550} height={733} size="stretch" minWidth={315} maxWidth={1000} minHeight={400} maxHeight={1533}>
+			{data.map(({ page, image }, index) => (
+				<Page number={page} key={index} className="demoPage">
+					<img src={image} alt={`Page ${page}`} className="w-auto h-auto" />
+				</Page>
 			))}
 		</HTMLFlipBook>
 	);
