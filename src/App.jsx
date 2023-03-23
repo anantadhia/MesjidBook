@@ -13,7 +13,7 @@ function App() {
 				<MyBook />
 			</div>
 			<div>
-				<p className=" mt-10 bg-slate-700 rounded-xl max-w-xl p-5 text-white">Silahkan digeser atau diklik pojokan kanan kiri untuk mengganti halaman</p>
+				<p className=" mt-10 bg-slate-700 rounded-xl  p-5 text-white">Silahkan digeser atau diklik pojokan kanan kiri untuk mengganti halaman</p>
 			</div>
 		</>
 	);
